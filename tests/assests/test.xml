@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[test]]></title>
+        <description><![CDATA[test]]></description>
+        <link>http://localhost</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Sat, 05 Sep 2021 00:00:00 GMT</lastBuildDate>
+        <atom:link href="http://localhost/rss/latest" rel="self" type="application/rss+xml"/>
+        <pubDate>Sat, 05 Sep 2020 00:00:00 GMT</pubDate>
+        <ttl>600</ttl>
+        <item>
+            <title>1</title>
+            <description>1</description>
+            <link>http://localhost/torrent/123</link>
+            <guid isPermaLink="true">http://localhost/torrent/123</guid>
+            <pubDate>Sat, 05 Sep 2022 07:09:30 GMT</pubDate>
+            <enclosure url="http://localhost:8090/ubuntu_iso_just_for_test.torrent" length="0" type="application/x-bittorrent"/>
+        </item>
+    </channel>
+</rss>

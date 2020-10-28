@@ -1,0 +1,39 @@
+[api]
+host = '127.0.0.1'
+port = '8091'
+auth_token = 'change_here_manually'
+
+[runtime]
+data_path = 'runtime'
+
+[logging]
+level = 'debug'
+output_path = './runtime/log.log'
+
+[downloader]
+type = 'aria2'
+save_path = '/tmp/download'
+[downloader.aria2]
+address = 'http://localhost:6800'
+secret = 'my_aria2c_secret'
+
+[web]
+enable = true
+port = 8080
+path = '/megumi'
+username = 'admin'
+password = 'admin'
+
+[[hooks]]
+name = 'chatbot'
+type = 'webhook'
+on = 'task_pushed'
+[[hooks.webhook]]
+address = 'http://localhost:8000/webhook?secret=123456789'
+
+[[hooks]]
+name = 'upload_to_storage'
+type = 'command'
+on = 'completed'
+[[hooks.command]]
+command = 'date'
