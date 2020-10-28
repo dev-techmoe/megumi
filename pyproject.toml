@@ -24,6 +24,9 @@ pytest-aiohttp = "^0.3.0"
 debugpy = "^1.0.0-rc.2"
 pyinstaller = "^4.0"
 
+[tool.poetry.scripts]
+megumi = 'megumi.cli.__main__:cli'
+
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
