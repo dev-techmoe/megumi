@@ -19,7 +19,7 @@ from colorlog import ColoredFormatter, StreamHandler
     '--log-level',
     type=click.Choice(['ERROR', 'INFO', 'DEBUG'], case_sensitive=False),
     help='Logging level',
-    default=None
+    default='INFO'
 )
 @click.option(
     '--no-ansi',
