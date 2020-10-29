@@ -72,4 +72,4 @@ def run_query(query_string: str, params={}, address=None, token=None):
                     raise Exception(data['errors'])
                 return data['data']
 
-    return asyncio.run(async_run_query())
+    return asyncio.get_event_loop().run_until_complete(async_run_query())
