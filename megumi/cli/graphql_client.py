@@ -44,7 +44,6 @@ def read_api_conn_info() -> Tuple[str, str]:
     address = f'http://localhost:{conn_info["port"]}'
     return address, conn_info['auth_token']
 
-
 class GraphqlExecutorException(Exception):
     def __init__(self, payload: List[Dict]):
         self.payload = payload

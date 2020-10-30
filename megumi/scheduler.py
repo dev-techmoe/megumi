@@ -37,12 +37,12 @@ class Scheduler:
             await asyncio.sleep(10)
     
     async def push_task(self, link: str):
-        self.logger.debug(f'Start send task to downloader. url="{link}"')
+        self.logger.debug(f'Start sending task to downloader. url="{link}"')
         if link.startswith('magnet'):
             self.download_connector.download_by_magnet_link(link)
         elif link.startswith('http'):
             async with aiohttp.ClientSession(trust_env=True) as sess:
-                self.logger.debug(f'Start download torrent file.')
+                self.logger.debug(f'Start downloading torrent file.')
                 resp = await sess.get(link)
                 binary = await resp.read()
 

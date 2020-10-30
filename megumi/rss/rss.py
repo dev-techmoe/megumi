@@ -36,7 +36,7 @@ async def get_rss_content(url: str) -> list:
 async def get_updates():
     dao = DAO.get_instance()
     all_rsses = dao.get_all_job()
-    logger.info('Start check new item of all RSS')
+    logger.info('Start checking new item of all RSS')
     for r in all_rsses:
         try:
             logger.debug(f'Fetching RSS url: {r["url"]}')

@@ -11,7 +11,7 @@ import os
 
 @click.command()
 def daemon():
-    click.echo(click.style(f"\nMegumi - schedule downloading manager", fg="bright_white"))
+    click.echo(click.style(f"\nMegumi - schedule download manager", fg="bright_white"))
     click.echo(click.style(f"Github: https://github.com/dev-techmoe/megumi", fg="bright_white"))
     click.echo(click.style(f"Version: {VERSION}\n", fg="bright_white"))
 
