@@ -1,6 +1,7 @@
 # Fuck Pylint 
 # "from unqlite import UnQLite" get `No name 'UnQLite' in module 'unqlite'pylint(no-name-in-module)``
 import unqlite
+from contextlib import contextmanager
 
 db: unqlite.UnQLite = None
 
@@ -19,6 +20,19 @@ def get_db(db_path: str=None, mem_db=False) -> unqlite.UnQLite:
         create_collection_if_not_exist('task_history')
 
     return db
+
+@contextmanager
+def get_database(coll_name: str=None):
+    global db
+    if coll_name:
+        coll = db.collection(coll_name)
+        if not coll.exists():
+            coll.create()
+        yield db, coll
+    else:
+        yield db, None
+
+    db.commit()
 
 def clean_db():
     global db
