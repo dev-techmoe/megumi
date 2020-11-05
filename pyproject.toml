@@ -6,7 +6,7 @@ authors = ["dev-techmoe <me@lolicookie.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.6.0"
 unqlite = "^0.8.1"
 colorlog = "^4.2.1"
 toml = "^0.10.1"
@@ -16,6 +16,7 @@ click = "^7.1.2"
 aiohttp_graphql = "^1.1.0"
 graphene = "^2.1.8"
 catconfig = "^0.1.0"
+dataclasses = { version="^0.7", python="^3.6, <3.7" }
 
 [tool.poetry.dev-dependencies]
 pylint = "^2.6.0"
@@ -23,6 +24,7 @@ pytest = "^6.0.1"
 pytest-aiohttp = "^0.3.0"
 debugpy = "^1.0.0-rc.2"
 pyinstaller = "^4.0"
+autopep8 = "^1.5.4"
 
 [tool.poetry.scripts]
 megumi = 'megumi.cli.__main__:cli'
